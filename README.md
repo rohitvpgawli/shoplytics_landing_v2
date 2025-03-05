@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shoplytics AI Landing Page
+
+This is the landing page for Shoplytics AI, an AI-powered analytics platform for Shopify stores.
+
+## Branch Information
+
+This branch (250305_v1) contains the latest version of the landing page with the following features:
+- Modern UI with glass-effect design
+- Responsive navigation with mobile support
+- Animated sections using Framer Motion
+- Tailwind CSS for styling
 
 ## Getting Started
 
