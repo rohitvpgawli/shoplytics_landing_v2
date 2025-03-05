@@ -1,108 +1,313 @@
 <svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background with gradient -->
-  <rect width="800" height="600" rx="16" fill="url(#paint0_linear)" />
+  <!-- Background with premium gradient -->
+  <rect width="800" height="600" rx="20" fill="url(#paint0_linear)" />
   
-  <!-- Dashboard Frame -->
-  <rect x="40" y="40" width="720" height="520" rx="12" fill="#1E1E2E" stroke="#2A2A3A" stroke-width="1" />
+  <!-- Main Dashboard Frame with subtle glow -->
+  <rect x="40" y="40" width="720" height="520" rx="16" fill="#151525" filter="url(#glow)" />
+  <rect x="40" y="40" width="720" height="520" rx="16" stroke="url(#border_gradient)" stroke-width="1.5" />
   
-  <!-- Top Navigation Bar -->
-  <rect x="40" y="40" width="720" height="60" rx="12" fill="#1E1E2E" stroke="#2A2A3A" stroke-width="1" />
+  <!-- Top Navigation Bar with glass effect -->
+  <rect x="40" y="40" width="720" height="60" rx="16" fill="url(#glass_effect)" />
+  <rect x="40" y="40" width="720" height="60" rx="16" stroke="url(#nav_border)" stroke-width="1" />
   
-  <!-- Navigation Dots -->
-  <circle cx="80" cy="70" r="6" fill="#A78BFA" opacity="0.8" />
-  <circle cx="105" cy="70" r="6" fill="#A78BFA" opacity="0.6" />
-  <circle cx="130" cy="70" r="6" fill="#A78BFA" opacity="0.4" />
+  <!-- Navigation Dots with glow -->
+  <circle cx="80" cy="70" r="6" fill="#A78BFA" filter="url(#smallGlow)" />
+  <circle cx="105" cy="70" r="6" fill="#A78BFA" opacity="0.8" filter="url(#smallGlow)" />
+  <circle cx="130" cy="70" r="6" fill="#A78BFA" opacity="0.6" filter="url(#smallGlow)" />
   
-  <!-- Search Bar -->
-  <rect x="500" y="55" width="200" height="30" rx="15" fill="#2D2D3F" stroke="#3D3D4F" stroke-width="1" />
-  <circle cx="515" cy="70" r="6" fill="#A78BFA" opacity="0.6" />
+  <!-- Search Bar with premium styling -->
+  <rect x="500" y="55" width="200" height="30" rx="15" fill="url(#search_gradient)" />
+  <rect x="500" y="55" width="200" height="30" rx="15" stroke="url(#search_border)" stroke-width="1" />
+  <circle cx="515" cy="70" r="6" fill="#A78BFA" filter="url(#smallGlow)" />
   
-  <!-- Left Sidebar -->
-  <rect x="40" y="100" width="160" height="460" rx="0" fill="#1E1E2E" stroke="#2A2A3A" stroke-width="1" />
+  <!-- Left Sidebar with glass effect -->
+  <rect x="40" y="100" width="160" height="460" rx="0" fill="url(#sidebar_gradient)" />
+  <rect x="40" y="100" width="160" height="460" rx="0" stroke="url(#sidebar_border)" stroke-width="1" />
   
-  <!-- Sidebar Menu Items (just outlines, no text) -->
-  <rect x="60" y="130" width="120" height="36" rx="8" fill="#7C3AED" opacity="0.2" stroke="#A78BFA" stroke-width="1" />
-  <rect x="60" y="180" width="120" height="36" rx="8" fill="transparent" stroke="#3D3D4F" stroke-width="1" />
-  <rect x="60" y="230" width="120" height="36" rx="8" fill="transparent" stroke="#3D3D4F" stroke-width="1" />
-  <rect x="60" y="280" width="120" height="36" rx="8" fill="transparent" stroke="#3D3D4F" stroke-width="1" />
-  <rect x="60" y="330" width="120" height="36" rx="8" fill="transparent" stroke="#3D3D4F" stroke-width="1" />
+  <!-- Sidebar Menu Items with premium styling -->
+  <rect x="60" y="130" width="120" height="36" rx="10" fill="url(#active_menu_gradient)" filter="url(#menuGlow)" />
+  <rect x="60" y="180" width="120" height="36" rx="10" fill="transparent" stroke="url(#menu_border)" stroke-width="1" />
+  <rect x="60" y="230" width="120" height="36" rx="10" fill="transparent" stroke="url(#menu_border)" stroke-width="1" />
+  <rect x="60" y="280" width="120" height="36" rx="10" fill="transparent" stroke="url(#menu_border)" stroke-width="1" />
+  <rect x="60" y="330" width="120" height="36" rx="10" fill="transparent" stroke="url(#menu_border)" stroke-width="1" />
   
-  <!-- Menu Icons (abstract shapes) -->
-  <circle cx="80" cy="148" r="6" fill="#A78BFA" />
-  <rect x="75" y="195" width="10" height="6" rx="2" fill="#6D6D8F" />
-  <rect x="75" y="245" width="10" height="6" rx="2" fill="#6D6D8F" />
-  <rect x="75" y="295" width="10" height="6" rx="2" fill="#6D6D8F" />
-  <rect x="75" y="345" width="10" height="6" rx="2" fill="#6D6D8F" />
+  <!-- Menu Icons with glow -->
+  <circle cx="80" cy="148" r="6" fill="#A78BFA" filter="url(#smallGlow)" />
+  <rect x="75" y="195" width="10" height="6" rx="3" fill="#8B8BAD" />
+  <rect x="75" y="245" width="10" height="6" rx="3" fill="#8B8BAD" />
+  <rect x="75" y="295" width="10" height="6" rx="3" fill="#8B8BAD" />
+  <rect x="75" y="345" width="10" height="6" rx="3" fill="#8B8BAD" />
   
-  <!-- Main Content Area - Top Section -->
-  <rect x="220" y="120" width="520" height="200" rx="12" fill="#1E1E2E" stroke="#2A2A3A" stroke-width="1" />
+  <!-- Main Content Area - Top Section with premium card styling -->
+  <rect x="220" y="120" width="520" height="200" rx="16" fill="url(#card_gradient)" />
+  <rect x="220" y="120" width="520" height="200" rx="16" stroke="url(#card_border)" stroke-width="1.5" />
   
-  <!-- Abstract Chart Lines (no numbers) -->
-  <path d="M240 270 L280 250 L320 260 L360 230 L400 210 L440 190 L480 200 L520 170 L560 150 L600 130 L640 110 L680 90" stroke="#A78BFA" stroke-width="3" stroke-linecap="round" fill="none" />
-  <path d="M240 270 L280 260 L320 270 L360 250 L400 260 L440 240 L480 250 L520 230 L560 240 L600 220 L640 210 L680 200" stroke="#7C3AED" stroke-width="3" stroke-linecap="round" fill="none" />
+  <!-- Premium Chart Lines with glow effect -->
+  <path d="M240 270 L280 250 L320 260 L360 230 L400 210 L440 190 L480 200 L520 170 L560 150 L600 130 L640 110 L680 90" stroke="url(#line_gradient1)" stroke-width="3" stroke-linecap="round" filter="url(#lineGlow)" />
+  <path d="M240 270 L280 260 L320 270 L360 250 L400 260 L440 240 L480 250 L520 230 L560 240 L600 220 L640 210 L680 200" stroke="url(#line_gradient2)" stroke-width="3" stroke-linecap="round" />
   
-  <!-- Chart Gradient -->
-  <path d="M240 270 L280 250 L320 260 L360 230 L400 210 L440 190 L480 200 L520 170 L560 150 L600 130 L640 110 L680 90 L680 270 L240 270 Z" fill="url(#paint1_linear)" opacity="0.2" />
+  <!-- Chart Gradient Area -->
+  <path d="M240 270 L280 250 L320 260 L360 230 L400 210 L440 190 L480 200 L520 170 L560 150 L600 130 L640 110 L680 90 L680 270 L240 270 Z" fill="url(#area_gradient)" opacity="0.3" />
   
-  <!-- Chart Dots -->
-  <circle cx="280" cy="250" r="4" fill="#A78BFA" />
-  <circle cx="360" cy="230" r="4" fill="#A78BFA" />
-  <circle cx="440" cy="190" r="4" fill="#A78BFA" />
-  <circle cx="520" cy="170" r="4" fill="#A78BFA" />
-  <circle cx="600" cy="130" r="4" fill="#A78BFA" />
-  <circle cx="680" cy="90" r="4" fill="#A78BFA" />
+  <!-- Chart Dots with glow -->
+  <circle cx="280" cy="250" r="5" fill="#A78BFA" filter="url(#dotGlow)" />
+  <circle cx="360" cy="230" r="5" fill="#A78BFA" filter="url(#dotGlow)" />
+  <circle cx="440" cy="190" r="5" fill="#A78BFA" filter="url(#dotGlow)" />
+  <circle cx="520" cy="170" r="5" fill="#A78BFA" filter="url(#dotGlow)" />
+  <circle cx="600" cy="130" r="5" fill="#A78BFA" filter="url(#dotGlow)" />
+  <circle cx="680" cy="90" r="5" fill="#A78BFA" filter="url(#dotGlow)" />
   
-  <!-- Bottom Left Card -->
-  <rect x="220" y="340" width="250" height="220" rx="12" fill="#1E1E2E" stroke="#2A2A3A" stroke-width="1" />
+  <!-- Bottom Left Card with premium styling -->
+  <rect x="220" y="340" width="250" height="220" rx="16" fill="url(#card_gradient)" />
+  <rect x="220" y="340" width="250" height="220" rx="16" stroke="url(#card_border)" stroke-width="1.5" />
   
   <!-- Abstract Card Content -->
-  <rect x="240" y="370" width="210" height="8" rx="4" fill="#3D3D4F" />
-  <rect x="240" y="390" width="160" height="8" rx="4" fill="#3D3D4F" opacity="0.7" />
+  <rect x="240" y="370" width="210" height="8" rx="4" fill="url(#text_gradient)" />
+  <rect x="240" y="390" width="160" height="8" rx="4" fill="url(#text_gradient)" opacity="0.7" />
   
-  <!-- Card Items -->
-  <rect x="240" y="420" width="210" height="60" rx="8" fill="#2D2D3F" stroke="#3D3D4F" stroke-width="1" />
-  <circle cx="265" cy="450" r="12" fill="#7C3AED" opacity="0.2" stroke="#A78BFA" stroke-width="1" />
-  <rect x="290" y="440" width="140" height="6" rx="3" fill="#6D6D8F" />
-  <rect x="290" y="455" width="100" height="6" rx="3" fill="#6D6D8F" opacity="0.6" />
+  <!-- Card Items with glass effect -->
+  <rect x="240" y="420" width="210" height="60" rx="12" fill="url(#item_gradient)" />
+  <rect x="240" y="420" width="210" height="60" rx="12" stroke="url(#item_border)" stroke-width="1" />
+  <circle cx="265" cy="450" r="12" fill="url(#circle_gradient)" filter="url(#smallGlow)" />
+  <rect x="290" y="440" width="140" height="6" rx="3" fill="url(#text_gradient)" />
+  <rect x="290" y="455" width="100" height="6" rx="3" fill="url(#text_gradient)" opacity="0.6" />
   
-  <rect x="240" y="490" width="210" height="60" rx="8" fill="#2D2D3F" stroke="#3D3D4F" stroke-width="1" />
-  <circle cx="265" cy="520" r="12" fill="#7C3AED" opacity="0.2" stroke="#A78BFA" stroke-width="1" />
-  <rect x="290" y="510" width="140" height="6" rx="3" fill="#6D6D8F" />
-  <rect x="290" y="525" width="100" height="6" rx="3" fill="#6D6D8F" opacity="0.6" />
+  <rect x="240" y="490" width="210" height="60" rx="12" fill="url(#item_gradient)" />
+  <rect x="240" y="490" width="210" height="60" rx="12" stroke="url(#item_border)" stroke-width="1" />
+  <circle cx="265" cy="520" r="12" fill="url(#circle_gradient)" filter="url(#smallGlow)" />
+  <rect x="290" y="510" width="140" height="6" rx="3" fill="url(#text_gradient)" />
+  <rect x="290" y="525" width="100" height="6" rx="3" fill="url(#text_gradient)" opacity="0.6" />
   
-  <!-- Bottom Right Card -->
-  <rect x="490" y="340" width="250" height="220" rx="12" fill="#1E1E2E" stroke="#2A2A3A" stroke-width="1" />
+  <!-- Bottom Right Card with premium styling -->
+  <rect x="490" y="340" width="250" height="220" rx="16" fill="url(#card_gradient)" />
+  <rect x="490" y="340" width="250" height="220" rx="16" stroke="url(#card_border)" stroke-width="1.5" />
   
   <!-- Abstract Visualization -->
-  <rect x="510" y="370" width="210" height="8" rx="4" fill="#3D3D4F" />
-  <rect x="510" y="390" width="160" height="8" rx="4" fill="#3D3D4F" opacity="0.7" />
+  <rect x="510" y="370" width="210" height="8" rx="4" fill="url(#text_gradient)" />
+  <rect x="510" y="390" width="160" height="8" rx="4" fill="url(#text_gradient)" opacity="0.7" />
   
-  <!-- Abstract Circular Chart -->
+  <!-- Premium Circular Chart with glow -->
   <circle cx="565" cy="470" r="60" fill="transparent" stroke="#3D3D4F" stroke-width="1" />
-  <path d="M565 410 A60 60 0 0 1 618 500" stroke="#A78BFA" stroke-width="6" stroke-linecap="round" fill="none" />
-  <path d="M618 500 A60 60 0 0 1 565 530" stroke="#7C3AED" stroke-width="6" stroke-linecap="round" fill="none" />
-  <path d="M565 530 A60 60 0 0 1 512 500" stroke="#C4B5FD" stroke-width="6" stroke-linecap="round" fill="none" />
-  <circle cx="565" cy="470" r="40" fill="#1E1E2E" stroke="#2A2A3A" stroke-width="1" />
+  <path d="M565 410 A60 60 0 0 1 618 500" stroke="url(#arc_gradient1)" stroke-width="8" stroke-linecap="round" filter="url(#arcGlow)" />
+  <path d="M618 500 A60 60 0 0 1 565 530" stroke="url(#arc_gradient2)" stroke-width="8" stroke-linecap="round" filter="url(#arcGlow)" />
+  <path d="M565 530 A60 60 0 0 1 512 500" stroke="url(#arc_gradient3)" stroke-width="8" stroke-linecap="round" filter="url(#arcGlow)" />
+  <circle cx="565" cy="470" r="40" fill="#151525" stroke="url(#inner_circle)" stroke-width="1.5" />
   
-  <!-- Abstract Bar Chart -->
-  <rect x="650" y="430" width="16" height="80" rx="4" fill="#7C3AED" opacity="0.3" stroke="#A78BFA" stroke-width="1" />
-  <rect x="675" y="450" width="16" height="60" rx="4" fill="#7C3AED" opacity="0.5" stroke="#A78BFA" stroke-width="1" />
-  <rect x="700" y="410" width="16" height="100" rx="4" fill="#7C3AED" opacity="0.7" stroke="#A78BFA" stroke-width="1" />
+  <!-- Premium Bar Chart with glass effect -->
+  <rect x="650" y="430" width="16" height="80" rx="8" fill="url(#bar_gradient1)" filter="url(#barGlow)" />
+  <rect x="650" y="430" width="16" height="80" rx="8" stroke="url(#bar_border)" stroke-width="1" />
   
-  <!-- Decorative Elements -->
-  <circle cx="700" cy="70" r="8" fill="#7C3AED" opacity="0.6" />
-  <circle cx="675" cy="70" r="8" fill="#A78BFA" opacity="0.6" />
-  <circle cx="650" cy="70" r="8" fill="#C4B5FD" opacity="0.6" />
+  <rect x="675" y="450" width="16" height="60" rx="8" fill="url(#bar_gradient2)" filter="url(#barGlow)" />
+  <rect x="675" y="450" width="16" height="60" rx="8" stroke="url(#bar_border)" stroke-width="1" />
   
-  <!-- Gradients -->
+  <rect x="700" y="410" width="16" height="100" rx="8" fill="url(#bar_gradient3)" filter="url(#barGlow)" />
+  <rect x="700" y="410" width="16" height="100" rx="8" stroke="url(#bar_border)" stroke-width="1" />
+  
+  <!-- Decorative Elements with glow -->
+  <circle cx="700" cy="70" r="8" fill="#7C3AED" filter="url(#smallGlow)" />
+  <circle cx="675" cy="70" r="8" fill="#A78BFA" filter="url(#smallGlow)" />
+  <circle cx="650" cy="70" r="8" fill="#C4B5FD" filter="url(#smallGlow)" />
+  
+  <!-- Decorative floating elements -->
+  <circle cx="180" cy="400" r="3" fill="#A78BFA" opacity="0.6" filter="url(#tinyGlow)" />
+  <circle cx="200" cy="420" r="2" fill="#7C3AED" opacity="0.5" filter="url(#tinyGlow)" />
+  <circle cx="160" cy="440" r="2" fill="#C4B5FD" opacity="0.4" filter="url(#tinyGlow)" />
+  
+  <circle cx="740" cy="200" r="3" fill="#A78BFA" opacity="0.6" filter="url(#tinyGlow)" />
+  <circle cx="720" cy="220" r="2" fill="#7C3AED" opacity="0.5" filter="url(#tinyGlow)" />
+  <circle cx="760" cy="240" r="2" fill="#C4B5FD" opacity="0.4" filter="url(#tinyGlow)" />
+  
+  <!-- Gradients and Filters -->
   <defs>
+    <!-- Background Gradient -->
     <linearGradient id="paint0_linear" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0F0F1A" />
+      <stop offset="0" stop-color="#0A0A1A" />
       <stop offset="1" stop-color="#1A1A2E" />
     </linearGradient>
-    <linearGradient id="paint1_linear" x1="240" y1="90" x2="240" y2="270" gradientUnits="userSpaceOnUse">
+    
+    <!-- Border Gradients -->
+    <linearGradient id="border_gradient" x1="0" y1="0" x2="720" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.3" />
+      <stop offset="0.5" stop-color="#7C3AED" stop-opacity="0.5" />
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.3" />
+    </linearGradient>
+    
+    <linearGradient id="nav_border" x1="0" y1="0" x2="720" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.2" />
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0.2" />
+    </linearGradient>
+    
+    <linearGradient id="sidebar_border" x1="0" y1="0" x2="160" y2="460" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.2" />
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0.2" />
+    </linearGradient>
+    
+    <linearGradient id="menu_border" x1="0" y1="0" x2="120" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.3" />
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0.3" />
+    </linearGradient>
+    
+    <linearGradient id="card_border" x1="0" y1="0" x2="520" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.3" />
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0.3" />
+    </linearGradient>
+    
+    <linearGradient id="item_border" x1="0" y1="0" x2="210" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.3" />
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0.3" />
+    </linearGradient>
+    
+    <linearGradient id="inner_circle" x1="525" y1="430" x2="605" y2="510" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.3" />
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0.3" />
+    </linearGradient>
+    
+    <linearGradient id="bar_border" x1="0" y1="0" x2="16" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.5" />
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0.5" />
+    </linearGradient>
+    
+    <!-- Fill Gradients -->
+    <linearGradient id="glass_effect" x1="40" y1="40" x2="760" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2A2A3A" stop-opacity="0.3" />
+      <stop offset="1" stop-color="#1E1E2E" stop-opacity="0.3" />
+    </linearGradient>
+    
+    <linearGradient id="sidebar_gradient" x1="40" y1="100" x2="200" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E1E2E" />
+      <stop offset="1" stop-color="#151525" />
+    </linearGradient>
+    
+    <linearGradient id="active_menu_gradient" x1="60" y1="130" x2="180" y2="166" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.2" />
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.1" />
+    </linearGradient>
+    
+    <linearGradient id="search_gradient" x1="500" y1="55" x2="700" y2="85" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2D2D3F" />
+      <stop offset="1" stop-color="#252535" />
+    </linearGradient>
+    
+    <linearGradient id="search_border" x1="500" y1="55" x2="700" y2="85" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.3" />
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0.3" />
+    </linearGradient>
+    
+    <linearGradient id="card_gradient" x1="0" y1="0" x2="520" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E1E2E" />
+      <stop offset="1" stop-color="#151525" />
+    </linearGradient>
+    
+    <linearGradient id="item_gradient" x1="240" y1="420" x2="450" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2D2D3F" />
+      <stop offset="1" stop-color="#252535" />
+    </linearGradient>
+    
+    <linearGradient id="circle_gradient" x1="253" y1="438" x2="277" y2="462" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.2" />
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.1" />
+    </linearGradient>
+    
+    <linearGradient id="text_gradient" x1="0" y1="0" x2="210" y2="8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6D6D8F" />
+      <stop offset="1" stop-color="#5D5D7F" />
+    </linearGradient>
+    
+    <!-- Line Gradients -->
+    <linearGradient id="line_gradient1" x1="240" y1="90" x2="680" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C4B5FD" />
+      <stop offset="1" stop-color="#A78BFA" />
+    </linearGradient>
+    
+    <linearGradient id="line_gradient2" x1="240" y1="200" x2="680" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C3AED" />
+      <stop offset="1" stop-color="#8B5CF6" />
+    </linearGradient>
+    
+    <linearGradient id="area_gradient" x1="240" y1="90" x2="240" y2="270" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#A78BFA" stop-opacity="0.6" />
       <stop offset="1" stop-color="#7C3AED" stop-opacity="0" />
     </linearGradient>
+    
+    <!-- Arc Gradients -->
+    <linearGradient id="arc_gradient1" x1="565" y1="410" x2="618" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C4B5FD" />
+      <stop offset="1" stop-color="#A78BFA" />
+    </linearGradient>
+    
+    <linearGradient id="arc_gradient2" x1="618" y1="500" x2="565" y2="530" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A78BFA" />
+      <stop offset="1" stop-color="#7C3AED" />
+    </linearGradient>
+    
+    <linearGradient id="arc_gradient3" x1="565" y1="530" x2="512" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C3AED" />
+      <stop offset="1" stop-color="#8B5CF6" />
+    </linearGradient>
+    
+    <!-- Bar Gradients -->
+    <linearGradient id="bar_gradient1" x1="650" y1="430" x2="666" y2="510" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C4B5FD" stop-opacity="0.7" />
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.3" />
+    </linearGradient>
+    
+    <linearGradient id="bar_gradient2" x1="675" y1="450" x2="691" y2="510" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.7" />
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0.3" />
+    </linearGradient>
+    
+    <linearGradient id="bar_gradient3" x1="700" y1="410" x2="716" y2="510" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.7" />
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0.3" />
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="glow" x="-10" y="-10" width="760" height="560" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur"/>
+    </filter>
+    
+    <filter id="smallGlow" x="-5" y="-5" width="30" height="30" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur"/>
+    </filter>
+    
+    <filter id="tinyGlow" x="-2" y="-2" width="10" height="10" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="1" result="effect1_foregroundBlur"/>
+    </filter>
+    
+    <filter id="menuGlow" x="-5" y="-5" width="130" height="46" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur"/>
+    </filter>
+    
+    <filter id="lineGlow" x="-5" y="-5" width="700" height="200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="3" result="effect1_foregroundBlur"/>
+    </filter>
+    
+    <filter id="dotGlow" x="-5" y="-5" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur"/>
+    </filter>
+    
+    <filter id="arcGlow" x="-5" y="-5" width="150" height="150" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="3" result="effect1_foregroundBlur"/>
+    </filter>
+    
+    <filter id="barGlow" x="-5" y="-5" width="26" height="110" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur"/>
+    </filter>
   </defs>
 </svg> 
