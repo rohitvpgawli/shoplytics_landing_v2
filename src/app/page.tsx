@@ -142,7 +142,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">AI-Powered Insights</h3>
               <p className="text-gray-300">
-                Get clear, actionable recommendations based on your store's data, not just raw numbers.
+                Get clear, actionable recommendations based on your store&apos;s data, not just raw numbers.
               </p>
             </motion.div>
 
@@ -159,7 +159,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">Talk to Your Data</h3>
               <p className="text-gray-300">
-                Ask questions in plain English and get immediate insights about your store's performance.
+                Ask questions in plain English and get immediate insights about your store&apos;s performance.
               </p>
             </motion.div>
 
@@ -245,7 +245,7 @@ export default function Home() {
               <span className="gradient-text">Key Benefits</span> for Your Business
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Shoplytics AI doesn't just show you data—it helps you understand what it means and what to do next.
+              Shoplytics AI doesn&apos;t just show you data—it helps you understand what it means and what to do next.
             </p>
           </div>
 
@@ -286,7 +286,7 @@ export default function Home() {
                   <ArrowRight className="w-5 h-5 text-purple-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Real-time insights on what's working</h3>
+                  <h3 className="text-xl font-bold mb-2">Real-time insights on what&apos;s working</h3>
                   <p className="text-gray-300">
                     Instantly see which products, campaigns, and strategies are driving revenue, and which need attention.
                   </p>
