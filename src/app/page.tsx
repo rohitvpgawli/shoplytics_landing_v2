@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, BarChart3, Brain, Cpu, LineChart, MessageSquare, Zap } from 'lucide-react';
 import { useState } from 'react';
+import ParticleBackground from '../components/ParticleBackground';
 
 export default function Home() {
   const [email, setEmail] = useState('');
@@ -20,6 +21,9 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/20 to-black" />
+        
+        {/* Particle background */}
+        <ParticleBackground />
         
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -52,65 +56,123 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Your AI-Powered
-            <span className="gradient-text"> Analytics Partner</span>
-          </motion.h1>
-          
-          <motion.p 
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Connect your Shopify store, ad platforms, and email tools to get AI-powered insights and recommendations to grow your revenue.
-          </motion.p>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+          {/* Text Content */}
+          <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+            <motion.h1 
+              className="text-5xl md:text-7xl font-bold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="block">Stop Guessing,</span>
+              <span className="gradient-text">Start Scaling</span>
+            </motion.h1>
+            
+            <motion.p 
+              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto md:mx-0"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Connect your Shopify store, ad platforms, and email tools to get AI-powered insights and recommendations to grow your revenue.
+            </motion.p>
 
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <a href="#waitlist" className="button-primary">
-              Join Waitlist
-            </a>
-            <a href="#demo" className="button-secondary">
-              Watch Demo
-            </a>
-          </motion.div>
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <a href="#waitlist" className="button-primary">
+                Join Waitlist
+              </a>
+              <a href="#demo" className="button-secondary">
+                Watch Demo
+              </a>
+            </motion.div>
+          </div>
 
-          {/* Stats */}
-          <motion.div 
-            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <div className="glass-effect p-6 rounded-2xl">
-              <div className="text-3xl font-bold gradient-text">1000+</div>
-              <div className="text-gray-400">Active Stores</div>
-            </div>
-            <div className="glass-effect p-6 rounded-2xl">
-              <div className="text-3xl font-bold gradient-text">$50M+</div>
-              <div className="text-gray-400">Revenue Analyzed</div>
-            </div>
-            <div className="glass-effect p-6 rounded-2xl">
-              <div className="text-3xl font-bold gradient-text">98%</div>
-              <div className="text-gray-400">Accuracy Rate</div>
-            </div>
-            <div className="glass-effect p-6 rounded-2xl">
-              <div className="text-3xl font-bold gradient-text">24/7</div>
-              <div className="text-gray-400">AI Support</div>
-            </div>
-          </motion.div>
+          {/* Dashboard Image */}
+          <div className="md:w-1/2 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="relative"
+            >
+              {/* Glowing effect */}
+              <div className="absolute inset-0 bg-gradient-radial from-purple-500/40 via-purple-500/20 to-transparent rounded-xl blur-3xl transform scale-150 animate-pulse-slow"></div>
+              <div className="absolute inset-0 bg-gradient-radial from-blue-500/30 via-indigo-500/15 to-transparent rounded-xl blur-2xl transform scale-125"></div>
+              <div className="absolute inset-0 bg-gradient-radial from-violet-500/20 via-fuchsia-500/10 to-transparent rounded-xl blur-xl transform scale-110"></div>
+              
+              {/* Dashboard image */}
+              <motion.img 
+                src="/images/dashboard-hero.svg" 
+                alt="Shoplytics AI Dashboard" 
+                className="relative z-10 w-full max-w-2xl mx-auto rounded-xl shadow-2xl border border-white/10"
+                style={{ filter: 'drop-shadow(0 0 20px rgba(167, 139, 250, 0.3))' }}
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              
+              {/* Floating elements */}
+              <motion.div 
+                className="absolute -top-5 -right-5 w-20 h-20 bg-purple-600/20 rounded-full blur-md"
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              <motion.div 
+                className="absolute -bottom-5 -left-5 w-16 h-16 bg-blue-600/20 rounded-full blur-md"
+                animate={{
+                  y: [0, 10, 0],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+            </motion.div>
+          </div>
         </div>
+
+        {/* Stats */}
+        <motion.div 
+          className="absolute bottom-10 left-0 right-0 mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <div className="glass-effect p-6 rounded-2xl">
+            <div className="text-3xl font-bold gradient-text">1000+</div>
+            <div className="text-gray-400">Active Stores</div>
+          </div>
+          <div className="glass-effect p-6 rounded-2xl">
+            <div className="text-3xl font-bold gradient-text">$50M+</div>
+            <div className="text-gray-400">Revenue Analyzed</div>
+          </div>
+          <div className="glass-effect p-6 rounded-2xl">
+            <div className="text-3xl font-bold gradient-text">98%</div>
+            <div className="text-gray-400">Accuracy Rate</div>
+          </div>
+          <div className="glass-effect p-6 rounded-2xl">
+            <div className="text-3xl font-bold gradient-text">24/7</div>
+            <div className="text-gray-400">AI Support</div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Features Section */}
