@@ -157,12 +157,12 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <div className="glass-effect p-6 rounded-2xl">
-            <div className="text-3xl font-bold gradient-text">1000+</div>
-            <div className="text-gray-400">Active Stores</div>
+            <div className="text-3xl font-bold gradient-text">3-in-1</div>
+            <div className="text-gray-400">Unified Platform</div>
           </div>
           <div className="glass-effect p-6 rounded-2xl">
-            <div className="text-3xl font-bold gradient-text">$50M+</div>
-            <div className="text-gray-400">Revenue Analyzed</div>
+            <div className="text-3xl font-bold gradient-text">10x</div>
+            <div className="text-gray-400">Faster Insights</div>
           </div>
           <div className="glass-effect p-6 rounded-2xl">
             <div className="text-3xl font-bold gradient-text">98%</div>
