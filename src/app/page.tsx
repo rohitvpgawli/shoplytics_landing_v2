@@ -197,107 +197,408 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Feature 1 */}
+          {/* Feature 1 - Data Consolidation */}
+          <div className="mb-32">
             <motion.div 
-              className="glass-effect p-8 rounded-2xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              className="flex flex-col lg:flex-row items-center gap-12"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="bg-purple-600/20 p-4 rounded-xl w-fit mb-6 shadow-md shadow-purple-500/10">
-                <Brain className="w-8 h-8 text-purple-400" />
+              {/* Left side - Text content */}
+              <div className="lg:w-1/2 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="bg-purple-600/20 p-4 rounded-xl shadow-md shadow-purple-500/10">
+                    <Cpu className="w-8 h-8 text-purple-400" />
+                  </div>
+                  <h3 className="text-3xl font-bold gradient-text">Data Consolidation</h3>
+                </div>
+                <p className="text-xl text-gray-300 leading-relaxed">
+                  Connect multiple platforms and get a 360° view of your entire business in one place.
+                </p>
+                <ul className="space-y-6 mt-4">
+                  <li className="flex items-start gap-3">
+                    <div className="bg-purple-600/20 p-2 rounded-full mt-1">
+                      <ArrowRight className="w-4 h-4 text-purple-400" />
+                    </div>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-white">Multiple integrations</span> including Shopify, Meta, and other ad platforms, email marketing tools like Klaviyo, and more
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="bg-purple-600/20 p-2 rounded-full mt-1">
+                      <ArrowRight className="w-4 h-4 text-purple-400" />
+                    </div>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-white">Connect once, understand forever</span> — our AI learns your business and continuously improves
+                    </p>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold mb-4">AI-Powered Insights</h3>
-              <p className="text-gray-300 leading-relaxed">
-                Get clear, actionable recommendations based on your store&apos;s data, not just raw numbers.
-              </p>
+              
+              {/* Right side - Graphic */}
+              <div className="lg:w-1/2">
+                <div className="relative">
+                  <motion.div 
+                    className="absolute -top-10 -left-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                    }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  />
+                  <div className="glass-effect p-3 rounded-2xl border border-purple-500/20 relative z-10">
+                    <div className="grid grid-cols-3 gap-2">
+                      {/* Integration icons - Row 1 */}
+                      <div className="glass-effect p-1.5 rounded-lg flex items-center justify-center aspect-square bg-[#1A1A1A] border border-gray-800">
+                        <img src="/images/shopify-logo.svg" alt="Shopify" className="w-14 h-14 object-contain" />
+                      </div>
+                      <div className="glass-effect p-1.5 rounded-lg flex items-center justify-center aspect-square bg-[#1A1A1A] border border-gray-800">
+                        <img src="/images/meta-logo.svg" alt="Meta" className="w-14 h-14 object-contain" />
+                      </div>
+                      <div className="glass-effect p-1.5 rounded-lg flex items-center justify-center aspect-square bg-[#1A1A1A] border border-gray-800">
+                        <img src="/images/google-ads-logo.svg" alt="Google Ads" className="w-14 h-14 object-contain" />
+                      </div>
+                      {/* Integration icons - Row 2 */}
+                      <div className="glass-effect p-1.5 rounded-lg flex items-center justify-center aspect-square bg-[#1A1A1A] border border-gray-800">
+                        <img src="/images/tiktok.svg" alt="TikTok" className="w-14 h-14 object-contain" />
+                      </div>
+                      <div className="glass-effect p-1.5 rounded-lg flex items-center justify-center aspect-square bg-[#1A1A1A] border border-gray-800">
+                        <img src="/images/amazon-logo.svg" alt="Amazon" className="w-14 h-14 object-contain" />
+                      </div>
+                      <div className="glass-effect p-1.5 rounded-lg flex items-center justify-center aspect-square bg-[#1A1A1A] border border-gray-800">
+                        <div className="text-base font-bold text-purple-400">+ More</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
+          </div>
 
-            {/* Feature 2 */}
+          {/* Feature 2 - AI Powered Chat */}
+          <div className="mb-32">
             <motion.div 
-              className="glass-effect p-8 rounded-2xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              className="flex flex-col-reverse lg:flex-row items-center gap-12"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="bg-purple-600/20 p-4 rounded-xl w-fit mb-6 shadow-md shadow-purple-500/10">
-                <MessageSquare className="w-8 h-8 text-purple-400" />
+              {/* Left side - Graphic */}
+              <div className="lg:w-1/2">
+                <div className="relative">
+                  <motion.div 
+                    className="absolute -top-10 -right-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                    }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  />
+                  <div className="glass-effect p-8 rounded-2xl border border-blue-500/20 relative z-10">
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="bg-blue-600/20 p-3 rounded-full">
+                        <MessageSquare className="w-6 h-6 text-blue-400" />
+                      </div>
+                      <div className="glass-effect p-4 rounded-xl flex-1">
+                        <p className="text-gray-300 italic">"How did our summer sale perform compared to last year?"</p>
+                      </div>
+                    </div>
+                    <div className="glass-effect p-6 rounded-xl border border-blue-500/20 mb-6">
+                      <p className="text-white mb-4">Your summer sale generated <span className="font-bold text-blue-400">32% more revenue</span> than last year with a <span className="font-bold text-blue-400">12% higher conversion rate</span>.</p>
+                      <div className="flex gap-4">
+                        <div className="glass-effect p-3 rounded-lg flex-1">
+                          <div className="text-sm text-gray-400">2022</div>
+                          <div className="text-xl font-bold text-white">$42,500</div>
+                        </div>
+                        <div className="glass-effect p-3 rounded-lg flex-1">
+                          <div className="text-sm text-gray-400">2023</div>
+                          <div className="text-xl font-bold gradient-text">$56,100</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex justify-end">
+                      <div className="glass-effect px-4 py-2 rounded-lg border border-blue-500/20 text-sm text-blue-400">
+                        View detailed analysis →
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Talk to Your Data</h3>
-              <p className="text-gray-300 leading-relaxed">
-                Ask questions in plain English and get immediate insights about your store&apos;s performance.
-              </p>
+              
+              {/* Right side - Text content */}
+              <div className="lg:w-1/2 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="bg-blue-600/20 p-4 rounded-xl shadow-md shadow-blue-500/10">
+                    <Brain className="w-8 h-8 text-blue-400" />
+                  </div>
+                  <h3 className="text-3xl font-bold gradient-text">AI Powered Chat</h3>
+                </div>
+                <p className="text-xl text-gray-300 leading-relaxed">
+                  Ask questions in plain English and get immediate insights about your store's performance.
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <div className="bg-blue-600/20 p-2 rounded-full mt-1">
+                      <ArrowRight className="w-4 h-4 text-blue-400" />
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold">5-6 Figures in Average Savings Across Sales Channels</p>
+                      <p className="text-gray-300 mt-1">Evaluates pricing patterns, seasonality effects & product-specific costs to recommend optimal pricing strategies</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="bg-blue-600/20 p-2 rounded-full mt-1">
+                      <ArrowRight className="w-4 h-4 text-blue-400" />
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold">3x Revenue & 2x Conversion Rates on Marketing Campaigns</p>
+                      <p className="text-gray-300 mt-1">Creates high-value customer segments for targeted promotions and personalized product recommendations</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="bg-blue-600/20 p-2 rounded-full mt-1">
+                      <ArrowRight className="w-4 h-4 text-blue-400" />
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold">20+ Hours Saved on Weekly Ad Reporting</p>
+                      <p className="text-gray-300 mt-1">Automates analysis of ad performance metrics and creates regular reports to optimize spend across channels</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </motion.div>
+          </div>
 
-            {/* Feature 3 */}
+          {/* Feature 3 - Consultant Level Deep Analysis */}
+          <div className="mb-32">
             <motion.div 
-              className="glass-effect p-8 rounded-2xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              className="flex flex-col lg:flex-row items-center gap-12"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="bg-purple-600/20 p-4 rounded-xl w-fit mb-6 shadow-md shadow-purple-500/10">
-                <BarChart3 className="w-8 h-8 text-purple-400" />
+              {/* Left side - Text content */}
+              <div className="lg:w-1/2 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="bg-green-600/20 p-4 rounded-xl shadow-md shadow-green-500/10">
+                    <BarChart3 className="w-8 h-8 text-green-400" />
+                  </div>
+                  <h3 className="text-3xl font-bold gradient-text">Consultant Level Analysis</h3>
+                </div>
+                <p className="text-xl text-gray-300 leading-relaxed">
+                  Leverage advanced data science to uncover insights that would normally require a team of consultants.
+                </p>
+                <div className="space-y-6 mt-6">
+                  <div className="glass-effect p-6 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
+                    <h4 className="text-xl font-bold text-white mb-2">Pricing & Promotion Optimization</h4>
+                    <p className="text-gray-300">
+                      Factors in competitor pricing, ad performance, inventory levels, and demand trends to recommend strategic price changes and promotions that maximize revenue and profitability.
+                    </p>
+                  </div>
+                  <div className="glass-effect p-6 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
+                    <h4 className="text-xl font-bold text-white mb-2">Ad Spend Management</h4>
+                    <p className="text-gray-300">
+                      Continuously analyzes ad performance, customer behavior, and sales data to determine the most effective budget allocation—ensuring your marketing dollars are spent where they generate the highest return.
+                    </p>
+                  </div>
+                  <div className="glass-effect p-6 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
+                    <h4 className="text-xl font-bold text-white mb-2">Customer Engagement</h4>
+                    <p className="text-gray-300">
+                      Clusters customers based on purchase behavior, interactions, and lifetime value, helping you personalize marketing, optimize retention, and improve targeting strategies with data-backed precision.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Custom Dashboards</h3>
-              <p className="text-gray-300 leading-relaxed">
-                Build dashboards that highlight the metrics most important to your business.
-              </p>
+              
+              {/* Right side - Graphic */}
+              <div className="lg:w-1/2">
+                <div className="relative">
+                  <motion.div 
+                    className="absolute -top-10 -left-10 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                    }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  />
+                  <div className="glass-effect p-8 rounded-2xl border border-green-500/20 relative z-10">
+                    <div className="flex justify-between mb-6">
+                      <div className="text-xl font-bold text-white">Performance Analysis</div>
+                      <div className="text-sm text-green-400">Last 30 days</div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="glass-effect p-4 rounded-xl">
+                        <div className="text-sm text-gray-400 mb-1">Revenue Growth</div>
+                        <div className="text-2xl font-bold text-white flex items-center gap-2">
+                          +24% <span className="text-green-400 text-sm">↑</span>
+                        </div>
+                      </div>
+                      <div className="glass-effect p-4 rounded-xl">
+                        <div className="text-sm text-gray-400 mb-1">Ad ROAS</div>
+                        <div className="text-2xl font-bold text-white flex items-center gap-2">
+                          3.8x <span className="text-green-400 text-sm">↑</span>
+                        </div>
+                      </div>
+                      <div className="glass-effect p-4 rounded-xl">
+                        <div className="text-sm text-gray-400 mb-1">AOV</div>
+                        <div className="text-2xl font-bold text-white flex items-center gap-2">
+                          $87 <span className="text-green-400 text-sm">↑</span>
+                        </div>
+                      </div>
+                      <div className="glass-effect p-4 rounded-xl">
+                        <div className="text-sm text-gray-400 mb-1">Retention Rate</div>
+                        <div className="text-2xl font-bold text-white flex items-center gap-2">
+                          42% <span className="text-green-400 text-sm">↑</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="glass-effect p-4 rounded-xl border border-green-500/20">
+                      <div className="text-white font-semibold mb-3">Recommended Actions</div>
+                      <ul className="space-y-2">
+                        <li className="flex items-center gap-2 text-sm text-gray-300">
+                          <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                          Increase budget for Facebook campaign "Summer Collection"
+                        </li>
+                        <li className="flex items-center gap-2 text-sm text-gray-300">
+                          <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                          Bundle "Product A" with "Product C" for 15% higher AOV
+                        </li>
+                        <li className="flex items-center gap-2 text-sm text-gray-300">
+                          <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                          Send re-engagement email to lapsed customer segment
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
+          </div>
 
-            {/* Feature 4 */}
+          {/* Feature 4 - AI Recommendation Engine */}
+          <div>
             <motion.div 
-              className="glass-effect p-8 rounded-2xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-col-reverse lg:flex-row items-center gap-12"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="bg-purple-600/20 p-4 rounded-xl w-fit mb-6 shadow-md shadow-purple-500/10">
-                <Zap className="w-8 h-8 text-purple-400" />
+              {/* Left side - Graphic */}
+              <div className="lg:w-1/2">
+                <div className="relative">
+                  <motion.div 
+                    className="absolute -top-10 -right-10 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                    }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  />
+                  <div className="glass-effect p-8 rounded-2xl border border-pink-500/20 relative z-10">
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="flex items-center gap-3">
+                        <div className="bg-pink-600/20 p-3 rounded-full">
+                          <Zap className="w-5 h-5 text-pink-400" />
+                        </div>
+                        <div className="text-xl font-bold text-white">Opportunity Alert</div>
+                      </div>
+                      <div className="text-sm text-pink-400">High Priority</div>
+                    </div>
+                    <div className="glass-effect p-5 rounded-xl border border-pink-500/20 mb-6">
+                      <h4 className="text-lg font-bold text-white mb-2">Inventory Forecast Alert</h4>
+                      <p className="text-gray-300 mb-4">
+                        Based on current sales velocity, "Summer Essentials Bundle" will stock out in 12 days, before your promotion ends.
+                      </p>
+                      <div className="flex gap-4">
+                        <div className="glass-effect px-4 py-2 rounded-lg text-sm text-white">
+                          Order 200 more units
+                        </div>
+                        <div className="glass-effect px-4 py-2 rounded-lg text-sm text-white">
+                          Adjust promotion
+                        </div>
+                      </div>
+                    </div>
+                    <div className="glass-effect p-5 rounded-xl border border-pink-500/20">
+                      <h4 className="text-lg font-bold text-white mb-2">Revenue Opportunity</h4>
+                      <p className="text-gray-300 mb-4">
+                        Customers who purchase "Product X" are 4x more likely to also buy "Product Y" within 30 days. Consider creating a bundle.
+                      </p>
+                      <div className="flex gap-4">
+                        <div className="glass-effect px-4 py-2 rounded-lg text-sm text-white">
+                          Create bundle
+                        </div>
+                        <div className="glass-effect px-4 py-2 rounded-lg text-sm text-white">
+                          View analysis
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Proactive Alerts</h3>
-              <p className="text-gray-300 leading-relaxed">
-                Get notified about significant changes and opportunities before they become obvious.
-              </p>
-            </motion.div>
-
-            {/* Feature 5 */}
-            <motion.div 
-              className="glass-effect p-8 rounded-2xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-purple-600/20 p-4 rounded-xl w-fit mb-6 shadow-md shadow-purple-500/10">
-                <LineChart className="w-8 h-8 text-purple-400" />
+              
+              {/* Right side - Text content */}
+              <div className="lg:w-1/2 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="bg-pink-600/20 p-4 rounded-xl shadow-md shadow-pink-500/10">
+                    <Zap className="w-8 h-8 text-pink-400" />
+                  </div>
+                  <h3 className="text-3xl font-bold gradient-text">AI Recommendation Engine</h3>
+                </div>
+                <p className="text-xl text-gray-300 leading-relaxed">
+                  Project sales and inventory needs with AI-powered forecasting to stay ahead of demand.
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <div className="bg-pink-600/20 p-2 rounded-full mt-1">
+                      <ArrowRight className="w-4 h-4 text-pink-400" />
+                    </div>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-white">Proactive notifications</span> about significant changes and opportunities before they become obvious
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="bg-pink-600/20 p-2 rounded-full mt-1">
+                      <ArrowRight className="w-4 h-4 text-pink-400" />
+                    </div>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-white">Product bundling suggestions</span> to increase average order value and improve customer satisfaction
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="bg-pink-600/20 p-2 rounded-full mt-1">
+                      <ArrowRight className="w-4 h-4 text-pink-400" />
+                    </div>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-white">Marketing campaign optimization</span> with suggestions for timing, frequency, and targeting to maximize ROI
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="bg-pink-600/20 p-2 rounded-full mt-1">
+                      <ArrowRight className="w-4 h-4 text-pink-400" />
+                    </div>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-white">Profitable discount ranges</span> that balance conversion rate improvements with margin preservation
+                    </p>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Forecasting Tools</h3>
-              <p className="text-gray-300 leading-relaxed">
-                Project sales and inventory needs with AI-powered forecasting to stay ahead of demand.
-              </p>
-            </motion.div>
-
-            {/* Feature 6 */}
-            <motion.div 
-              className="glass-effect p-8 rounded-2xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-purple-600/20 p-4 rounded-xl w-fit mb-6 shadow-md shadow-purple-500/10">
-                <Cpu className="w-8 h-8 text-purple-400" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Seamless Integration</h3>
-              <p className="text-gray-300 leading-relaxed">
-                Connect with Shopify, Meta, Google, TikTok, and Klaviyo in just a few clicks.
-              </p>
             </motion.div>
           </div>
         </div>
