@@ -56,21 +56,21 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center py-16">
           {/* Text Content */}
-          <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+          <div className="md:w-1/2 text-center md:text-left mb-16 md:mb-0 space-y-8 md:pr-8">
             <motion.h1 
-              className="text-5xl md:text-7xl font-bold mb-6"
+              className="text-5xl md:text-7xl font-bold tracking-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="block">Stop Guessing,</span>
+              <span className="block mb-2">Stop Guessing,</span>
               <span className="gradient-text">Start Scaling</span>
             </motion.h1>
             
             <motion.p 
-              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto md:mx-0"
+              className="text-lg md:text-xl text-gray-300 max-w-full mx-auto md:mx-0 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -79,22 +79,29 @@ export default function Home() {
             </motion.p>
 
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <a href="#waitlist" className="button-primary">
-                Join Waitlist
-              </a>
-              <a href="#demo" className="button-secondary">
-                Watch Demo
-              </a>
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 w-full md:w-[90%] lg:w-[95%]">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="px-6 py-4 rounded-full bg-black/30 border border-purple-500/30 focus:border-purple-500 focus:outline-none flex-grow text-base"
+                />
+                <button type="submit" className="button-primary flex items-center justify-center py-4 px-6 whitespace-nowrap">
+                  Join Waitlist <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+              </form>
             </motion.div>
           </div>
 
           {/* Dashboard Image */}
-          <div className="md:w-1/2 relative">
+          <div className="md:w-1/2 relative md:pl-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -181,114 +188,114 @@ export default function Home() {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">Powerful Features</span> for Your Store
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Shoplytics AI combines advanced analytics with actionable insights to help you make smarter decisions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Feature 1 */}
             <motion.div 
-              className="glass-effect p-8 rounded-2xl"
+              className="glass-effect p-8 rounded-2xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <div className="bg-purple-600/20 p-3 rounded-xl w-fit mb-4">
-                <Brain className="w-6 h-6 text-purple-400" />
+              <div className="bg-purple-600/20 p-4 rounded-xl w-fit mb-6 shadow-md shadow-purple-500/10">
+                <Brain className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">AI-Powered Insights</h3>
-              <p className="text-gray-300">
+              <h3 className="text-2xl font-bold mb-4">AI-Powered Insights</h3>
+              <p className="text-gray-300 leading-relaxed">
                 Get clear, actionable recommendations based on your store&apos;s data, not just raw numbers.
               </p>
             </motion.div>
 
             {/* Feature 2 */}
             <motion.div 
-              className="glass-effect p-8 rounded-2xl"
+              className="glass-effect p-8 rounded-2xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="bg-purple-600/20 p-3 rounded-xl w-fit mb-4">
-                <MessageSquare className="w-6 h-6 text-purple-400" />
+              <div className="bg-purple-600/20 p-4 rounded-xl w-fit mb-6 shadow-md shadow-purple-500/10">
+                <MessageSquare className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Talk to Your Data</h3>
-              <p className="text-gray-300">
+              <h3 className="text-2xl font-bold mb-4">Talk to Your Data</h3>
+              <p className="text-gray-300 leading-relaxed">
                 Ask questions in plain English and get immediate insights about your store&apos;s performance.
               </p>
             </motion.div>
 
             {/* Feature 3 */}
             <motion.div 
-              className="glass-effect p-8 rounded-2xl"
+              className="glass-effect p-8 rounded-2xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="bg-purple-600/20 p-3 rounded-xl w-fit mb-4">
-                <BarChart3 className="w-6 h-6 text-purple-400" />
+              <div className="bg-purple-600/20 p-4 rounded-xl w-fit mb-6 shadow-md shadow-purple-500/10">
+                <BarChart3 className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Custom Dashboards</h3>
-              <p className="text-gray-300">
+              <h3 className="text-2xl font-bold mb-4">Custom Dashboards</h3>
+              <p className="text-gray-300 leading-relaxed">
                 Build dashboards that highlight the metrics most important to your business.
               </p>
             </motion.div>
 
             {/* Feature 4 */}
             <motion.div 
-              className="glass-effect p-8 rounded-2xl"
+              className="glass-effect p-8 rounded-2xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <div className="bg-purple-600/20 p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-6 h-6 text-purple-400" />
+              <div className="bg-purple-600/20 p-4 rounded-xl w-fit mb-6 shadow-md shadow-purple-500/10">
+                <Zap className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Proactive Alerts</h3>
-              <p className="text-gray-300">
+              <h3 className="text-2xl font-bold mb-4">Proactive Alerts</h3>
+              <p className="text-gray-300 leading-relaxed">
                 Get notified about significant changes and opportunities before they become obvious.
               </p>
             </motion.div>
 
             {/* Feature 5 */}
             <motion.div 
-              className="glass-effect p-8 rounded-2xl"
+              className="glass-effect p-8 rounded-2xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <div className="bg-purple-600/20 p-3 rounded-xl w-fit mb-4">
-                <LineChart className="w-6 h-6 text-purple-400" />
+              <div className="bg-purple-600/20 p-4 rounded-xl w-fit mb-6 shadow-md shadow-purple-500/10">
+                <LineChart className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Forecasting Tools</h3>
-              <p className="text-gray-300">
+              <h3 className="text-2xl font-bold mb-4">Forecasting Tools</h3>
+              <p className="text-gray-300 leading-relaxed">
                 Project sales and inventory needs with AI-powered forecasting to stay ahead of demand.
               </p>
             </motion.div>
 
             {/* Feature 6 */}
             <motion.div 
-              className="glass-effect p-8 rounded-2xl"
+              className="glass-effect p-8 rounded-2xl border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               viewport={{ once: true }}
             >
-              <div className="bg-purple-600/20 p-3 rounded-xl w-fit mb-4">
-                <Cpu className="w-6 h-6 text-purple-400" />
+              <div className="bg-purple-600/20 p-4 rounded-xl w-fit mb-6 shadow-md shadow-purple-500/10">
+                <Cpu className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Seamless Integration</h3>
-              <p className="text-gray-300">
+              <h3 className="text-2xl font-bold mb-4">Seamless Integration</h3>
+              <p className="text-gray-300 leading-relaxed">
                 Connect with Shopify, Meta, Google, TikTok, and Klaviyo in just a few clicks.
               </p>
             </motion.div>
