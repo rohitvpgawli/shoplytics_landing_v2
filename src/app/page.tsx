@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, BarChart3, Brain, Cpu, LineChart, MessageSquare, Zap } from 'lucide-react';
+import { ArrowRight, BarChart3, Brain, Cpu, MessageSquare, Zap } from 'lucide-react';
 import { useState } from 'react';
 import ParticleBackground from '../components/ParticleBackground';
 
@@ -364,15 +364,6 @@ export default function Home() {
                       <p className="text-gray-300 mt-1">Creates high-value customer segments for targeted promotions and personalized product recommendations</p>
                     </div>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <div className="bg-blue-600/20 p-2 rounded-full mt-1">
-                      <ArrowRight className="w-4 h-4 text-blue-400" />
-                    </div>
-                    <div>
-                      <p className="text-white font-semibold">20+ Hours Saved on Weekly Ad Reporting</p>
-                      <p className="text-gray-300 mt-1">Automates analysis of ad performance metrics and creates regular reports to optimize spend across channels</p>
-                    </div>
-                  </li>
                 </ul>
               </div>
             </motion.div>
@@ -388,7 +379,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               {/* Left side - Text content */}
-              <div className="lg:w-1/2 space-y-6">
+              <div className="lg:w-1/2 space-y-5">
                 <div className="flex items-center gap-4">
                   <div className="bg-green-600/20 p-4 rounded-xl shadow-md shadow-green-500/10">
                     <BarChart3 className="w-8 h-8 text-green-400" />
@@ -398,21 +389,21 @@ export default function Home() {
                 <p className="text-xl text-gray-300 leading-relaxed">
                   Leverage advanced data science to uncover insights that would normally require a team of consultants.
                 </p>
-                <div className="space-y-6 mt-6">
-                  <div className="glass-effect p-6 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
-                    <h4 className="text-xl font-bold text-white mb-2">Pricing & Promotion Optimization</h4>
+                <div className="space-y-4 mt-4">
+                  <div className="glass-effect p-5 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
+                    <h4 className="text-xl font-bold text-white mb-1">Pricing & Promotion Optimization</h4>
                     <p className="text-gray-300">
                       Factors in competitor pricing, ad performance, inventory levels, and demand trends to recommend strategic price changes and promotions that maximize revenue and profitability.
                     </p>
                   </div>
-                  <div className="glass-effect p-6 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
-                    <h4 className="text-xl font-bold text-white mb-2">Ad Spend Management</h4>
+                  <div className="glass-effect p-5 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
+                    <h4 className="text-xl font-bold text-white mb-1">Ad Spend Management</h4>
                     <p className="text-gray-300">
                       Continuously analyzes ad performance, customer behavior, and sales data to determine the most effective budget allocation—ensuring your marketing dollars are spent where they generate the highest return.
                     </p>
                   </div>
-                  <div className="glass-effect p-6 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
-                    <h4 className="text-xl font-bold text-white mb-2">Customer Engagement</h4>
+                  <div className="glass-effect p-5 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
+                    <h4 className="text-xl font-bold text-white mb-1">Customer Engagement</h4>
                     <p className="text-gray-300">
                       Clusters customers based on purchase behavior, interactions, and lifetime value, helping you personalize marketing, optimize retention, and improve targeting strategies with data-backed precision.
                     </p>
@@ -434,40 +425,40 @@ export default function Home() {
                       ease: "easeInOut"
                     }}
                   />
-                  <div className="glass-effect p-8 rounded-2xl border border-green-500/20 relative z-10">
-                    <div className="flex justify-between mb-6">
+                  <div className="glass-effect p-7 rounded-2xl border border-green-500/20 relative z-10">
+                    <div className="flex justify-between mb-4">
                       <div className="text-xl font-bold text-white">Performance Analysis</div>
                       <div className="text-sm text-green-400">Last 30 days</div>
                     </div>
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div className="glass-effect p-4 rounded-xl">
+                    <div className="grid grid-cols-2 gap-3 mb-4">
+                      <div className="glass-effect p-3 rounded-xl">
                         <div className="text-sm text-gray-400 mb-1">Revenue Growth</div>
                         <div className="text-2xl font-bold text-white flex items-center gap-2">
                           +24% <span className="text-green-400 text-sm">↑</span>
                         </div>
                       </div>
-                      <div className="glass-effect p-4 rounded-xl">
+                      <div className="glass-effect p-3 rounded-xl">
                         <div className="text-sm text-gray-400 mb-1">Ad ROAS</div>
                         <div className="text-2xl font-bold text-white flex items-center gap-2">
                           3.8x <span className="text-green-400 text-sm">↑</span>
                         </div>
                       </div>
-                      <div className="glass-effect p-4 rounded-xl">
+                      <div className="glass-effect p-3 rounded-xl">
                         <div className="text-sm text-gray-400 mb-1">AOV</div>
                         <div className="text-2xl font-bold text-white flex items-center gap-2">
                           $87 <span className="text-green-400 text-sm">↑</span>
                         </div>
                       </div>
-                      <div className="glass-effect p-4 rounded-xl">
+                      <div className="glass-effect p-3 rounded-xl">
                         <div className="text-sm text-gray-400 mb-1">Retention Rate</div>
                         <div className="text-2xl font-bold text-white flex items-center gap-2">
                           42% <span className="text-green-400 text-sm">↑</span>
                         </div>
                       </div>
                     </div>
-                    <div className="glass-effect p-4 rounded-xl border border-green-500/20">
-                      <div className="text-white font-semibold mb-3">Recommended Actions</div>
-                      <ul className="space-y-2">
+                    <div className="glass-effect p-3 rounded-xl border border-green-500/20">
+                      <div className="text-white font-semibold mb-2">Recommended Actions</div>
+                      <ul className="space-y-1.5">
                         <li className="flex items-center gap-2 text-sm text-gray-300">
                           <div className="w-2 h-2 rounded-full bg-green-400"></div>
                           Increase budget for Facebook campaign "Summer Collection"
