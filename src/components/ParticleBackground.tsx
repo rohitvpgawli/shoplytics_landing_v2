@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface Particle {
   x: number;
@@ -16,8 +16,17 @@ interface Particle {
 
 export default function ParticleBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
   
   useEffect(() => {
+    // Check if device is mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
     const canvas = canvasRef.current;
     if (!canvas) return;
     
@@ -33,8 +42,8 @@ export default function ParticleBackground() {
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
     
-    // Create particles
-    const particleCount = 70;
+    // Create particles - reduce count on mobile
+    const particleCount = isMobile ? 30 : 70;
     const particles: Particle[] = [];
     
     const colors = [
@@ -49,9 +58,9 @@ export default function ParticleBackground() {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        size: Math.random() * 4 + 1,
-        speedX: (Math.random() - 0.5) * 0.2,
-        speedY: (Math.random() - 0.5) * 0.2,
+        size: Math.random() * (isMobile ? 3 : 4) + 1,
+        speedX: (Math.random() - 0.5) * (isMobile ? 0.1 : 0.2),
+        speedY: (Math.random() - 0.5) * (isMobile ? 0.1 : 0.2),
         color: colors[Math.floor(Math.random() * colors.length)],
         opacity: Math.random() * 0.5 + 0.1,
         pulse: Math.random() > 0.5,
@@ -59,9 +68,21 @@ export default function ParticleBackground() {
       });
     }
     
-    // Animation loop
-    const animate = () => {
-      requestAnimationFrame(animate);
+    let animationFrameId: number;
+    let lastTime = 0;
+    const fps = isMobile ? 30 : 60; // Lower FPS on mobile
+    const fpsInterval = 1000 / fps;
+    
+    // Animation loop with throttling
+    const animate = (timestamp: number) => {
+      animationFrameId = requestAnimationFrame(animate);
+      
+      // Throttle frame rate
+      const elapsed = timestamp - lastTime;
+      if (elapsed < fpsInterval) return;
+      
+      lastTime = timestamp - (elapsed % fpsInterval);
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       particles.forEach(particle => {
@@ -93,8 +114,8 @@ export default function ParticleBackground() {
         ctx.fillStyle = `${colorBase}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
         ctx.fill();
         
-        // Add subtle glow for some particles
-        if (particle.size > 3) {
+        // Add subtle glow for some particles - skip on mobile
+        if (!isMobile && particle.size > 3) {
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
           ctx.fillStyle = `${colorBase}10`;
@@ -103,17 +124,20 @@ export default function ParticleBackground() {
       });
     };
     
-    animate();
+    animate(0);
     
     return () => {
       window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize', checkMobile);
+      cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [isMobile]);
   
   return (
     <canvas 
       ref={canvasRef} 
       className="absolute inset-0 z-0 opacity-40"
+      aria-hidden="true"
     />
   );
 } 

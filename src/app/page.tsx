@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pb-16 sm:pb-0">
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/20 to-black" />
         
@@ -56,11 +56,11 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center py-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center pt-16 sm:pt-10 md:py-16">
           {/* Text Content */}
-          <div className="md:w-1/2 text-center md:text-left mb-16 md:mb-0 space-y-8 md:pr-8">
+          <div className="md:w-1/2 text-center md:text-left mb-16 md:mb-0 space-y-6 md:space-y-8 md:pr-8">
             <motion.h1 
-              className="text-5xl md:text-7xl font-bold tracking-tight"
+              className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mt-8 md:mt-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -84,18 +84,27 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 w-full md:w-[90%] lg:w-[95%]">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  required
-                  className="px-6 py-4 rounded-full bg-black/30 border border-purple-500/30 focus:border-purple-500 focus:outline-none flex-grow text-base"
-                />
-                <button type="submit" className="button-primary flex items-center justify-center py-4 px-6 whitespace-nowrap">
-                  Join Waitlist <ArrowRight className="ml-2 h-5 w-5" />
-                </button>
+              <form onSubmit={handleSubmit} className="w-full md:w-[90%] lg:w-[95%]">
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <div className="relative flex-grow">
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full px-6 py-3 sm:py-4 rounded-full bg-black/30 border border-purple-500/30 focus:border-purple-500 focus:outline-none text-base"
+                      required
+                    />
+                  </div>
+                  <div className="sm:flex-shrink-0">
+                    <button 
+                      type="submit" 
+                      className="w-full sm:w-auto button-primary flex items-center justify-center py-3 sm:py-4 px-6 whitespace-nowrap border border-purple-500 shadow-lg shadow-purple-500/20"
+                    >
+                      Join Waitlist <ArrowRight className="ml-2 h-5 w-5" />
+                    </button>
+                  </div>
+                </div>
               </form>
             </motion.div>
           </div>
@@ -183,24 +192,27 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/5 to-black" />
-        
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="features" className="py-20 md:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="gradient-text">Powerful Features</span> for Your Store
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <motion.h2 
+              className="text-4xl md:text-5xl font-bold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <span className="gradient-text">Features</span> that make a difference
+            </motion.h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Shoplytics AI combines advanced analytics with actionable insights to help you make smarter decisions.
             </p>
           </div>
 
           {/* Feature 1 - Data Consolidation */}
-          <div className="mb-32">
+          <div className="mb-20 md:mb-32">
             <motion.div 
-              className="flex flex-col lg:flex-row items-center gap-12"
+              className="flex flex-col lg:flex-row items-center gap-8 md:gap-12"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
@@ -238,8 +250,8 @@ export default function Home() {
               </div>
               
               {/* Right side - Graphic */}
-              <div className="lg:w-1/2">
-                <div className="relative">
+              <div className="lg:w-1/2 w-full px-4 sm:px-0">
+                <div className="relative mx-auto max-w-md">
                   <motion.div 
                     className="absolute -top-10 -left-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"
                     animate={{
@@ -251,27 +263,41 @@ export default function Home() {
                       ease: "easeInOut"
                     }}
                   />
-                  <div className="glass-effect p-3 rounded-2xl border border-purple-500/20 relative z-10">
-                    <div className="grid grid-cols-3 gap-2">
+                  <div className="glass-effect p-4 sm:p-6 rounded-2xl border border-purple-500/20 relative z-10 overflow-hidden">
+                    <div className="grid grid-cols-3 gap-y-6 gap-x-2 sm:gap-x-3 items-center justify-items-center">
                       {/* Integration icons - Row 1 */}
-                      <div className="glass-effect p-1.5 rounded-lg flex items-center justify-center aspect-square bg-[#1A1A1A] border border-gray-800">
-                        <img src="/images/shopify-logo.svg" alt="Shopify" className="w-14 h-14 object-contain" />
+                      <div className="flex items-center justify-center">
+                        <img src="/images/shopify-logo.svg" alt="Shopify" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
                       </div>
-                      <div className="glass-effect p-1.5 rounded-lg flex items-center justify-center aspect-square bg-[#1A1A1A] border border-gray-800">
-                        <img src="/images/meta-logo.svg" alt="Meta" className="w-14 h-14 object-contain" />
+                      <div className="flex items-center justify-center">
+                        <img src="/images/meta-logo.svg" alt="Meta" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
                       </div>
-                      <div className="glass-effect p-1.5 rounded-lg flex items-center justify-center aspect-square bg-[#1A1A1A] border border-gray-800">
-                        <img src="/images/google-ads-logo.svg" alt="Google Ads" className="w-14 h-14 object-contain" />
+                      <div className="flex items-center justify-center">
+                        <img src="/images/google-ads-logo.svg" alt="Google Ads" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
                       </div>
+                      
                       {/* Integration icons - Row 2 */}
-                      <div className="glass-effect p-1.5 rounded-lg flex items-center justify-center aspect-square bg-[#1A1A1A] border border-gray-800">
-                        <img src="/images/tiktok.svg" alt="TikTok" className="w-14 h-14 object-contain" />
+                      <div className="flex items-center justify-center">
+                        <img src="/images/tiktok.svg?v=2" alt="TikTok" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
                       </div>
-                      <div className="glass-effect p-1.5 rounded-lg flex items-center justify-center aspect-square bg-[#1A1A1A] border border-gray-800">
-                        <img src="/images/amazon-logo.svg" alt="Amazon" className="w-14 h-14 object-contain" />
+                      <div className="flex items-center justify-center">
+                        <img src="/images/amazon-logo.svg" alt="Amazon" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
                       </div>
-                      <div className="glass-effect p-1.5 rounded-lg flex items-center justify-center aspect-square bg-[#1A1A1A] border border-gray-800">
-                        <div className="text-base font-bold text-purple-400">+ More</div>
+                      <div className="flex items-center justify-center">
+                        <img src="/images/instagram.svg" alt="Instagram" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
+                      </div>
+                      
+                      {/* Integration icons - Row 3 */}
+                      <div className="flex items-center justify-center">
+                        <img src="/images/excel-icon.svg" alt="Excel" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
+                      </div>
+                      <div className="flex items-center justify-center">
+                        <img src="/images/google-analytics-logo.svg" alt="Google Analytics" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
+                      </div>
+                      <div className="flex items-center justify-center">
+                        <div className="flex items-center justify-center bg-purple-500/20 rounded-full w-10 h-10 sm:w-12 sm:h-12">
+                          <span className="text-purple-300 font-semibold">+</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -316,11 +342,11 @@ export default function Home() {
                       <p className="text-white mb-4">Your summer sale generated <span className="font-bold text-blue-400">32% more revenue</span> than last year with a <span className="font-bold text-blue-400">12% higher conversion rate</span>.</p>
                       <div className="flex gap-4">
                         <div className="glass-effect p-3 rounded-lg flex-1">
-                          <div className="text-sm text-gray-400">2022</div>
+                          <div className="text-sm text-gray-400">2023</div>
                           <div className="text-xl font-bold text-white">$42,500</div>
                         </div>
                         <div className="glass-effect p-3 rounded-lg flex-1">
-                          <div className="text-sm text-gray-400">2023</div>
+                          <div className="text-sm text-gray-400">2024</div>
                           <div className="text-xl font-bold gradient-text">$56,100</div>
                         </div>
                       </div>
@@ -381,8 +407,8 @@ export default function Home() {
               {/* Left side - Text content */}
               <div className="lg:w-1/2 space-y-5">
                 <div className="flex items-center gap-4">
-                  <div className="bg-green-600/20 p-4 rounded-xl shadow-md shadow-green-500/10">
-                    <BarChart3 className="w-8 h-8 text-green-400" />
+                  <div className="bg-purple-600/20 p-4 rounded-xl shadow-md shadow-purple-500/10">
+                    <BarChart3 className="w-8 h-8 text-purple-400" />
                   </div>
                   <h3 className="text-3xl font-bold gradient-text">Consultant Level Analysis</h3>
                 </div>
@@ -390,22 +416,22 @@ export default function Home() {
                   Leverage advanced data science to uncover insights that would normally require a team of consultants.
                 </p>
                 <div className="space-y-4 mt-4">
-                  <div className="glass-effect p-5 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
-                    <h4 className="text-xl font-bold text-white mb-1">Pricing & Promotion Optimization</h4>
+                  <div className="glass-effect p-4 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <h4 className="text-xl font-bold text-white">Pricing & Promotion Optimization</h4>
                     <p className="text-gray-300">
-                      Factors in competitor pricing, ad performance, inventory levels, and demand trends to recommend strategic price changes and promotions that maximize revenue and profitability.
+                      Smart price recommendations based on competitor data, inventory, and demand trends.
                     </p>
                   </div>
-                  <div className="glass-effect p-5 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
-                    <h4 className="text-xl font-bold text-white mb-1">Ad Spend Management</h4>
+                  <div className="glass-effect p-4 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <h4 className="text-xl font-bold text-white">Ad Spend Management</h4>
                     <p className="text-gray-300">
-                      Continuously analyzes ad performance, customer behavior, and sales data to determine the most effective budget allocation—ensuring your marketing dollars are spent where they generate the highest return.
+                      Optimize marketing budget allocation for maximum ROI across all channels.
                     </p>
                   </div>
-                  <div className="glass-effect p-5 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
-                    <h4 className="text-xl font-bold text-white mb-1">Customer Engagement</h4>
+                  <div className="glass-effect p-4 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <h4 className="text-xl font-bold text-white">Customer Engagement</h4>
                     <p className="text-gray-300">
-                      Clusters customers based on purchase behavior, interactions, and lifetime value, helping you personalize marketing, optimize retention, and improve targeting strategies with data-backed precision.
+                      Data-driven customer segmentation for personalized marketing and improved retention.
                     </p>
                   </div>
                 </div>
@@ -415,7 +441,7 @@ export default function Home() {
               <div className="lg:w-1/2">
                 <div className="relative">
                   <motion.div 
-                    className="absolute -top-10 -left-10 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"
+                    className="absolute -top-10 -left-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"
                     animate={{
                       scale: [1, 1.2, 1],
                     }}
@@ -425,50 +451,50 @@ export default function Home() {
                       ease: "easeInOut"
                     }}
                   />
-                  <div className="glass-effect p-7 rounded-2xl border border-green-500/20 relative z-10">
+                  <div className="glass-effect p-7 rounded-2xl border border-purple-500/20 relative z-10">
                     <div className="flex justify-between mb-4">
                       <div className="text-xl font-bold text-white">Performance Analysis</div>
-                      <div className="text-sm text-green-400">Last 30 days</div>
+                      <div className="text-sm text-purple-400">Last 30 days</div>
                     </div>
                     <div className="grid grid-cols-2 gap-3 mb-4">
                       <div className="glass-effect p-3 rounded-xl">
                         <div className="text-sm text-gray-400 mb-1">Revenue Growth</div>
                         <div className="text-2xl font-bold text-white flex items-center gap-2">
-                          +24% <span className="text-green-400 text-sm">↑</span>
+                          +24% <span className="text-purple-400 text-sm">↑</span>
                         </div>
                       </div>
                       <div className="glass-effect p-3 rounded-xl">
                         <div className="text-sm text-gray-400 mb-1">Ad ROAS</div>
                         <div className="text-2xl font-bold text-white flex items-center gap-2">
-                          3.8x <span className="text-green-400 text-sm">↑</span>
+                          3.8x <span className="text-purple-400 text-sm">↑</span>
                         </div>
                       </div>
                       <div className="glass-effect p-3 rounded-xl">
                         <div className="text-sm text-gray-400 mb-1">AOV</div>
                         <div className="text-2xl font-bold text-white flex items-center gap-2">
-                          $87 <span className="text-green-400 text-sm">↑</span>
+                          $87 <span className="text-purple-400 text-sm">↑</span>
                         </div>
                       </div>
                       <div className="glass-effect p-3 rounded-xl">
                         <div className="text-sm text-gray-400 mb-1">Retention Rate</div>
                         <div className="text-2xl font-bold text-white flex items-center gap-2">
-                          42% <span className="text-green-400 text-sm">↑</span>
+                          42% <span className="text-purple-400 text-sm">↑</span>
                         </div>
                       </div>
                     </div>
-                    <div className="glass-effect p-3 rounded-xl border border-green-500/20">
+                    <div className="glass-effect p-3 rounded-xl border border-purple-500/20">
                       <div className="text-white font-semibold mb-2">Recommended Actions</div>
                       <ul className="space-y-1.5">
                         <li className="flex items-center gap-2 text-sm text-gray-300">
-                          <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                          <div className="w-2 h-2 rounded-full bg-purple-400"></div>
                           Increase budget for Facebook campaign "Summer Collection"
                         </li>
                         <li className="flex items-center gap-2 text-sm text-gray-300">
-                          <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                          <div className="w-2 h-2 rounded-full bg-purple-400"></div>
                           Bundle "Product A" with "Product C" for 15% higher AOV
                         </li>
                         <li className="flex items-center gap-2 text-sm text-gray-300">
-                          <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                          <div className="w-2 h-2 rounded-full bg-purple-400"></div>
                           Send re-engagement email to lapsed customer segment
                         </li>
                       </ul>
